@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    color: black;
+}
+
+
+.nav {
+    display:flex;
+    height: 6rem;
+    position:relative;
+    background-color:#f8f9fa;
+    justify-content: flex-end;
+}
+.nav__links{
+    display:flex;
+    list-style: none;
+    align-items:center;
+}
+
+.nav__link {
+    text-decoration: none;
+    color:#000;
+}
+
+.nav__item {
+    margin-right:1rem;
+    padding:2rem;
+    padding-top:3rem;
+    padding-bottom:3rem;
+    font-size: 1.5rem;
+    cursor:pointer;
+}
+.burger-menu {
+    height: 4rem;
+    width: 4rem;
+    position:absolute;
+    left:0;
+    margin-top:.5rem;
+    margin-left: 1rem;
+    padding-top:.7rem;
+    cursor: pointer;
+    fill:#39b385;
+}
+
+.dropdown{
+    width:100vw;
+    background-color:#f3f3f3;
+    visibility:hidden;
+    opacity:0;
+    z-index:500;
+}
+
+.dropdown__list{
+    list-style: none;
+}
+
+.dropdown__item{
+    padding:1.5rem;
+    font-size:1.5rem
+}
+.header-headline{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top:14rem;
+    position:relative;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size:7.5rem;
+    position:absolute;
+    left:9rem;
+}
+
+.header-background {
+    position:relative;
+}
+.header-background::after {
+    background:linear-gradient(to top left, #39b385, #9be15d);
+    display:block;
+    content: '';
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    transform: scale(1.07, 1.05) skewX(-15deg);
+}
+.header-italic {
+    color:#fff;
+    margin-left:1rem;
+    margin-right:1rem;
+}
+
+.hero-image {
+    width:50%;
+    position:absolute;
+    right:0;
+    margin-top:15rem;
+}
+i {
+    font-weight: lighter;
+}
+.about{
+    position:absolute;
+    top:16rem;
+    left:10rem;
+    width:50rem
+}
+.btn {
+    background-color:transparent;
+    padding:.5rem;
+    border:none;
+    border-bottom: .2rem solid #39b385;
+    display:inline-block;
+    position:absolute;
+    top:23rem;
+    left:28rem;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+
+.skills {
+    display:flex;
+    flex-direction:row;
+    height:12rem;
+    background-color:#39b385;
+    position:relative;
+    margin-top:35rem;
+}
+
+.icon{
+    display:inline-block;
+    height:7rem;
+    width:7rem;
+    margin:2.5rem auto;
+    fill: #f1f3f5;
+}
+
+.projects{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.project-header{
+    font-family: 'Bebas Neue', cursive;
+    font-size:5.5rem;
+    font-weight: lighter;
+    margin-top:3rem;
+    border-bottom:.2rem solid #39b385;
+    position:relative;
+}
+
+.laptop {
+    height:100%;
+    width:100%;
+}
+
+
+.image-container-one{
+    display:flex;
+    flex-direction: row;
+    margin-top:5rem
+}
+
+.test{
+    /* position:relative; */
+    font-size:1.5rem;
+    /* top:30rem;
+    left:-40rem; */
+}
+.image-container-two {
+    display:flex;
+    flex-direction: row;
+    margin-top:5rem;
+}
+
+.modal{
+    position:fixed;
+    top:50%;
+    left:50%;
+    width:60rem;
+    transform: translate(-50%,-50%);
+    background-color: #f3f3f3;
+    padding:5rem 6rem;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition:all 0.5s;
+}
+
+.overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    transition: all 0.5s;
+}
+
+.modal__form{
+    margin:0 3rem;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    gap:2.5rem;
+}
+
+.form__header{
+    font-size:3rem; 
+    margin-bottom:3rem;
+    margin-left:17rem;
+    line-height: 3rem;
+}
+.form__label{
+    font-family:sans-serif;
+    font-size:1.5rem
+}
+.form__input{
+    width:30rem;
+    height:3rem;
+}
+
+.text-area{
+    width:30rem;
+}
+
+.submit-btn{
+    position:fixed;
+    right:0;
+    bottom:0;
+    font-size:1.5rem;
+    text-transform: uppercase;;
+    margin-right:19rem;
+    margin-top:2rem;
+    margin-bottom:1rem;
+    padding:1rem;
+    border:none;
+    background-color:#39b385;
+    color:#fff;
+}
+
+.btn--close-modal{
+    position:fixed;
+    width:2.5rem;
+    height:2.5rem;
+    border:none;
+    background-color:#39b385;
+    color:#fff;
+}
+
+.hidden{
+    visibility:hidden;
+    opacity:100;
+}
